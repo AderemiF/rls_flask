@@ -10,9 +10,9 @@ from flask import Flask, render_template, request, session, url_for
 
 summarizer = pipeline("summarization")
 
-application = Flask(__name__)
+app = Flask(__name__)
 
-@application.route('/')
+@app.route('/')
 def index():
 	return render_template('index.html')
 
@@ -34,7 +34,7 @@ def pdf2txt(inPDFfile, outTXTFile):
 
 #text = ''  
 
-@application.route('/summarizer', methods =["GET", "POST"])
+@app.route('/summarizer', methods =["GET", "POST"])
 def summary():
    myfile = request.files['myfile']
    
@@ -109,4 +109,4 @@ def preprocessing(txt):
 
 
 if __name__ == "__main__":
-    application.run()
+    app.run()
