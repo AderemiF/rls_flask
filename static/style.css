@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url(papers.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: blue;
+    font-size: 30px;
+}
+
+#label {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.btn {
+    border: 1px solid lightcoral;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover{
+    background-color: lightcoral;
+    color: white;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: lightcoral;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.btn::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.btn:hover::before{
+    height: 180%;
+}
